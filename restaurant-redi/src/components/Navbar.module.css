@@ -1,0 +1,41 @@
+.header {
+  text-align: center;
+  margin: 20px 0;
+  font-family: "Playfair Display", serif;
+  color: #2e4053;
+}
+
+.title {
+  font-size: 48px;
+
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: #546e7a;
+}
+
+.decor {
+  width: 120px;
+  height: 5px;
+  background-color: #c39bd3;
+  margin: 10px auto;
+}
+
+.input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  /* width: 100%; */
+  box-sizing: border-box;
+transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
