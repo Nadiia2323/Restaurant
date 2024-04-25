@@ -54,7 +54,7 @@ function RestaurantMenu() {
                   image={dish.image}
                   price={dish.price}
                   onOrder={() => handleOrder(dish.name, dish.price)}
-                  isSelected={selectedDishes.some(
+                  selected={selectedDishes.some(
                     (selectedDish) => selectedDish.name === dish.name
                   )}
                 />

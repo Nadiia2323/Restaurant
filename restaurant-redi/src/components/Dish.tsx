@@ -18,7 +18,7 @@ function Dish({
   price,
   description,
   onOrder,
-  isSelected,
+  selected,
 }: DishProps) {
   return (
     <div className={styles.dishContainer}>
@@ -28,7 +28,7 @@ function Dish({
       </div>
       <h3>{name}</h3>
       <p>${price}</p>
-      <Button onOrder={onOrder} isSelected={isSelected} />
+      <Button onOrder={onOrder} isSelected={selected} />
     </div>
   );
 }
