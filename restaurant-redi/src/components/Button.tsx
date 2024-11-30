@@ -1,6 +1,11 @@
 import styles from "./Button.module.css";
 
-function Button({ onOrder, isSelected }) {
+type ButtonProps = {
+  onOrder: () => void;
+  isSelected: boolean;
+};
+
+function Button({ onOrder, isSelected }: ButtonProps) {
   const buttonClass = isSelected ? styles.removeOrder : styles.dishButton;
   return (
     <>

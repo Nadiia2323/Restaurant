@@ -1,7 +1,15 @@
-import React from "react";
 import styles from "./Receipt.module.css";
 
-function Receipt({ selectedDishes }) {
+type Dish = {
+  name: string;
+  price: number;
+};
+
+type ReceiptProps = {
+  selectedDishes: Dish[];
+};
+
+function Receipt({ selectedDishes }: ReceiptProps) {
   const totalPrice = selectedDishes.reduce((acc, dish) => acc + dish.price, 0);
 
   return (

@@ -1,8 +1,11 @@
-import React from "react";
 import styles from "./Navbar.module.css";
 
-function SearchField({ dishesFilter }) {
-  const handleOnChange = (event) => {
+type SearchFieldProps = {
+  dishesFilter: (query: string) => void;
+};
+
+function SearchField({ dishesFilter }: SearchFieldProps) {
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     dishesFilter(event.target.value);
   };
 

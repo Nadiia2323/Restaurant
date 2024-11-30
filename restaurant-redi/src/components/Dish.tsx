@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import styles from "./Dish.module.css";
 import Button from "./Button";
 
@@ -7,7 +7,7 @@ type DishProps = {
   image: string;
   price: number;
   description: string;
-  isSelected: [{}];
+  isSelected: boolean;
 
   onOrder: () => void;
 };
@@ -18,7 +18,7 @@ function Dish({
   price,
   description,
   onOrder,
-  selected,
+  isSelected,
 }: DishProps) {
   return (
     <div className={styles.dishContainer}>
@@ -28,7 +28,7 @@ function Dish({
       </div>
       <h3>{name}</h3>
       <p>${price}</p>
-      <Button onOrder={onOrder} isSelected={selected} />
+      <Button onOrder={onOrder} isSelected={isSelected} />
     </div>
   );
 }
