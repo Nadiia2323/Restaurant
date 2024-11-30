@@ -20,10 +20,12 @@ function Dish({
   onOrder,
   isSelected,
 }: DishProps) {
+  console.log(image);
   return (
     <div className={styles.dishContainer}>
       <div className={styles.dishImageContainer}>
-        <img src={image} alt={name} className={styles.dishImage} />
+        <img src={`images/${image}`} alt={name} className={styles.dishImage} />
+
         <div className={styles.imageOverlay}>{description}</div>
       </div>
       <h3>{name}</h3>
